@@ -76,10 +76,10 @@ const Todo = () => {
       }
       return true;
     })
+    !a[0].done ? setAlertMsg('You have marked a Task as pending!') : setAlertMsg('You have marked a Task Completed!')
     localStorage.setItem('data', JSON.stringify(data));
     setStatus(!status)
     setVariant('success')
-    setAlertMsg('You have marked Task Completed.')
     setShow(true)
   }
   const handleEditTask = (id) => {
